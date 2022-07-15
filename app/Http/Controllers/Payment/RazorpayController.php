@@ -30,7 +30,7 @@ class RazorpayController extends Controller
         $payout = $request->actualtotal;
         $payout = round($payout, 2);
         
-        $cart_table = Cart::where('user_id',Auth::id())->get()->toArray();
+        $cart_table = Cart::where('user_id',Auth::id())->get();
         
         $cart_total = 0;
 
